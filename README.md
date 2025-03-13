@@ -108,7 +108,7 @@ $$
 A = \frac{3647}{4270} = 0.8540 \approx 85.41\%
 $$
 
-There is a small discrepancy $(\(\approx 0.4\%\))$, but we see that the theoretical calculation is very close to the actual result.
+There is a small discrepancy ($\approx 0.4\%$), but we see that the theoretical calculation is very close to the actual result.
 
 ### Distribution Shift, Left-Skewed
 
