@@ -63,7 +63,7 @@ A = \sum_{i=0}^{9} p_i a_i
 $$
 
 We know that:
-- $\(p_i\)$ is the proportion of digit $\(i\)$ in the test set: $\(\frac{\text{the number of samples of digit } i}{\text{total test samples}}\)$.
+- $p_i$ is the proportion of digit $\(i\)$ in the test set: $\(\frac{\text{the number of samples of digit } i}{\text{total test samples}}\)$.
 - \(a_i\) is the fraction of correctly classified digit $\(i\)$ samples: $\(\frac{\text{correct predictions for digit } i}{\text{total samples of digit } i}\)$.
 
 Since $\(p_i\)$'s numerator is the same as $\(a_i\)$'s denominator, we can simplify it as:
@@ -77,8 +77,6 @@ $$
 For the easy calculation for the proof, I used the confusion matrix below.
 
 ![Confusion matrix with Distribution Shift](Q5_cm.png)
-
-Using the confusion matrix (Figure~\ref{fig:Q5_cm}) from our model's performance on the new test set:
 
 $$
 A = \sum_{i=0}^{9} \frac{\text{correct predictions for digit } i}{\text{total test samples}}
