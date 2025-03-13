@@ -46,7 +46,7 @@ With this setup, I got 0.7797 test loss and 73.66% test accuracy, which is sligh
 
 ---
 
-## Bonus: Proof (Prediction) of Test Accuracy
+## Proof (Prediction) of Test Accuracy
 
 ### Domain Shift + Distribution Shift
 
@@ -54,15 +54,13 @@ With this setup, I got 0.7797 test loss and 73.66% test accuracy, which is sligh
 
 Given that the probability of each digit is denoted as $(p_0, p_1, p_2, \dots, p_9\)$ and they sum to 1:
 
-\[
-\sum_{i=0}^{9} p_i = 1
-\]
+$$ \sum_{i=0}^{9} p_i = 1 $$
 
-Let \(a_i\) represent the model's accuracy for digit \(i\), which is the fraction of correctly classified samples for that digit. The overall expected test accuracy, \(A\), is then a weighted sum of per-class accuracies:
+Let $(a_i\)$ represent the model's accuracy for digit $\(i\)$, which is the fraction of correctly classified samples for that digit. The overall expected test accuracy, \(A\), is then a weighted sum of per-class accuracies:
 
-\[
+$$
 A = \sum_{i=0}^{9} p_i a_i
-\]
+$$
 
 We know that:
 - \(p_i\) is the proportion of digit \(i\) in the test set: \(\frac{\text{the number of samples of digit } i}{\text{total test samples}}\).
@@ -70,9 +68,9 @@ We know that:
 
 Since \(p_i\)'s numerator is the same as \(a_i\)'s denominator, we can simplify it as:
 
-\[
+$$
 A = \sum_{i=0}^{9} \frac{\text{correct predictions for digit } i}{\text{total test samples}}
-\]
+$$
 
 #### Proof
 
@@ -82,19 +80,19 @@ For the easy calculation for the proof, I used the confusion matrix below.
 
 Using the confusion matrix (Figure~\ref{fig:Q5_cm}) from our model's performance on the new test set:
 
-\[
+$$
 A = \sum_{i=0}^{9} \frac{\text{correct predictions for digit } i}{\text{total test samples}}
-\]
+$$
 
 Substituting actual values:
 
-\[
+$$
 A = \frac{81}{4270} + \frac{37}{4270} + \frac{1}{4270} + \frac{19}{4270} + \frac{22}{4270} + \frac{7}{4270} + \frac{0}{4270} + \frac{3}{4270} + \frac{16}{4270} + \frac{0}{4270}
-\]
+$$
 
-\[
+$$
 A = \frac{180}{4270} = 0.04355 \approx 4.36\%
-\]
+$$
 
 This result closely matches our observed test accuracy (4.38%), with a small difference of 0.02%. This discrepancy is likely due to rounding errors, computational variations, or something else during model evaluation. However, the theoretical calculation is very close to the actual result, validating our formula.
 
@@ -102,13 +100,13 @@ This result closely matches our observed test accuracy (4.38%), with a small dif
 
 Similar to above, I double-checked the accuracy with the formula:
 
-\[
+$$
 A = \frac{908}{4270} + \frac{993}{4270} + \frac{644}{4270} + \frac{592}{4270} + \frac{305}{4270} + \frac{108}{4270} + \frac{48}{4270} + \frac{31}{4270} + \frac{12}{4270} + \frac{6}{4270}
-\]
+$$
 
-\[
+$$
 A = \frac{3647}{4270} = 0.8540 \approx 85.41\%
-\]
+$$
 
 There is a small discrepancy (\(\approx 0.4\%\)), but we see that the theoretical calculation is very close to the actual result.
 
@@ -116,12 +114,12 @@ There is a small discrepancy (\(\approx 0.4\%\)), but we see that the theoretica
 
 Similar to above, I double-checked the accuracy with the formula:
 
-\[
+$$
 A = \frac{10}{4270} + \frac{20}{4270} + \frac{26}{4270} + \frac{75}{4270} + \frac{155}{4270} + \frac{225}{4270} + \frac{386}{4270} + \frac{859}{4270} + \frac{697}{4270} + \frac{673}{4270}
-\]
+$$
 
-\[
+$$
 A = \frac{3126}{4270} = 0.7320 \approx 73.21\%
-\]
+$$
 
 There is a small discrepancy (\(\approx 0.45\%\)), but we see that the theoretical calculation is very close to the actual result.
