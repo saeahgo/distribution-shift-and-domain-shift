@@ -122,4 +122,4 @@ $$
 A = \frac{3126}{4270} = 0.7320 \approx 73.21\%
 $$
 
-There is a small discrepancy $(\(\approx 0.45\%\))$, but we see that the theoretical calculation is very close to the actual result.
+There is a small discrepancy $(\approx 0.45\%\)$, but we see that the theoretical calculation is very close to the actual result.
