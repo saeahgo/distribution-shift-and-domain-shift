@@ -52,21 +52,21 @@ With this setup, I got 0.7797 test loss and 73.66% test accuracy, which is sligh
 
 #### Formula Setup
 
-Given that the probability of each digit is denoted as $(p_0, p_1, p_2, \dots, p_9\)$ and they sum to 1:
+Given that the probability of each digit is denoted as $\(p_0, p_1, p_2, \dots, p_9\)$ and they sum to 1:
 
 $$ \sum_{i=0}^{9} p_i = 1 $$
 
-Let $(a_i\)$ represent the model's accuracy for digit $\(i\)$, which is the fraction of correctly classified samples for that digit. The overall expected test accuracy, \(A\), is then a weighted sum of per-class accuracies:
+Let $\(a_i\)$ represent the model's accuracy for digit $\(i\)$, which is the fraction of correctly classified samples for that digit. The overall expected test accuracy, $\(A\)$, is then a weighted sum of per-class accuracies:
 
 $$
 A = \sum_{i=0}^{9} p_i a_i
 $$
 
 We know that:
-- \(p_i\) is the proportion of digit \(i\) in the test set: \(\frac{\text{the number of samples of digit } i}{\text{total test samples}}\).
-- \(a_i\) is the fraction of correctly classified digit \(i\) samples: \(\frac{\text{correct predictions for digit } i}{\text{total samples of digit } i}\).
+- $\(p_i\)$ is the proportion of digit $\(i\)$ in the test set: $\(\frac{\text{the number of samples of digit } i}{\text{total test samples}}\)$.
+- \(a_i\) is the fraction of correctly classified digit $\(i\)$ samples: $\(\frac{\text{correct predictions for digit } i}{\text{total samples of digit } i}\)$.
 
-Since \(p_i\)'s numerator is the same as \(a_i\)'s denominator, we can simplify it as:
+Since $\(p_i\)$'s numerator is the same as $\(a_i\)$'s denominator, we can simplify it as:
 
 $$
 A = \sum_{i=0}^{9} \frac{\text{correct predictions for digit } i}{\text{total test samples}}
@@ -108,7 +108,7 @@ $$
 A = \frac{3647}{4270} = 0.8540 \approx 85.41\%
 $$
 
-There is a small discrepancy (\(\approx 0.4\%\)), but we see that the theoretical calculation is very close to the actual result.
+There is a small discrepancy $(\(\approx 0.4\%\))$, but we see that the theoretical calculation is very close to the actual result.
 
 ### Distribution Shift, Left-Skewed
 
@@ -122,4 +122,4 @@ $$
 A = \frac{3126}{4270} = 0.7320 \approx 73.21\%
 $$
 
-There is a small discrepancy (\(\approx 0.45\%\)), but we see that the theoretical calculation is very close to the actual result.
+There is a small discrepancy $(\(\approx 0.45\%\))$, but we see that the theoretical calculation is very close to the actual result.
