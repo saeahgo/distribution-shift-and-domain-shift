@@ -52,7 +52,7 @@ With this setup, I got 0.7797 test loss and 73.66% test accuracy, which is sligh
 
 #### Formula Setup
 
-Given that the probability of each digit is denoted as \(p_0, p_1, p_2, \dots, p_9\) and they sum to 1:
+Given that the probability of each digit is denoted as $(p_0, p_1, p_2, \dots, p_9\)$ and they sum to 1:
 
 \[
 \sum_{i=0}^{9} p_i = 1
